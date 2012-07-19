@@ -1,0 +1,39 @@
+Preferences {
+ inputs 0
+ name Preferences
+ AutoSaveName "\[file dirname \[value root.name]]/\[lindex \[split \[file tail \[value root.name]] \".\"] 0].\[clock format \[clock seconds] -format \{%h%d@%H-%M%p\}].nk"
+ AutoSaveTime 120
+ CacheLimit 90
+ diskCacheGB 100
+ maxPanels 1
+ NodeColour01Color 0xa6c6a6ff
+ NodeColour07Color 0xb8ffb8ff
+ NodeColour09Color 0x9c5252ff
+ SelectedColor 0xffa73fff
+ LabelFont Verdana
+ LabelSize 10
+ DAGBackColor 0x2d2d2dff
+ ArrowColorLeft 0xaf0000ff
+ ArrowColorRight 0x919e00ff
+ ArrowColorUp 0xaf0000ff
+ ArrowColorDown 0x8414ff
+ InputArrowSize 24
+ LeftInputArrowSize 12.2
+ OutputArrowSize 11
+ ArrowheadLength 6.8
+ ArrowheadWidth 11.4
+ ArrowWidth 1.7
+ dot_node_scale 1.54
+ viewer_bg_color_3D 0x282828ff
+ viewer_fg_color_3D 0x8e8e8eff
+ icon_size_base 25
+ icon_size_power 0.3
+ object_interaction_speed 0.2
+ defaultBufferDepth half-float
+ defaultGPUForViewer true
+ defaultGPUForInputs true
+ ScriptEditorFont "Liberation Mono"
+ ScriptEditorFontSize 12
+ clearOnSuccess false
+ echoAllCommands true
+}

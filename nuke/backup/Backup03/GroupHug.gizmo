@@ -1,0 +1,51 @@
+#! C:/Program Files/Nuke5.2v1/Nuke5.2.exe -nx
+version 5.2100
+Gizmo {
+ lock_connections true
+}
+ Constant {
+  inputs 0
+  channels rgb
+  name Constant1
+  xpos 77
+  ypos -98
+ }
+set N15155860 [stack 0]
+ Input {
+  inputs 0
+  name Input1
+  xpos 205
+  ypos -197
+ }
+ Reformat {
+  name Reformat1
+  xpos 205
+  ypos -146
+ }
+ Transform {
+  translate {196 190}
+  scale 0.53
+  center {1828 0}
+  name Transform1
+  xpos 205
+  ypos -113
+ }
+ CopyBBox {
+  inputs 2
+  name CopyBBox1
+  xpos 205
+  ypos -87
+ }
+push $N15155860
+ Merge2 {
+  inputs 2
+  name Merge1
+  xpos 205
+  ypos -51
+ }
+ Output {
+  name Output1
+  xpos 205
+  ypos 49
+ }
+end_group
