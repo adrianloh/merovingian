@@ -1,0 +1,60 @@
+#! C:/Program Files/Nuke6.3v8/Nuke6.3.exe -nx
+version 6.3 v8
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="2560" h="1576" screen="0">
+        <splitter orientation="1">
+            <split size="2123"/>
+            <splitter orientation="2">
+                <split size="815"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="694"/>
+                <dock id="" activePageId="DAG.1">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="419"/>
+            <dock id="" activePageId="Script Editor.1">
+                <page id="Script Editor.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/Users/adrianloh/Desktop/VM/02012.nk
+ format "2048 1024 0 0 2048 1024 1 RED_2K"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+}
+Read {
+ inputs 0
+ file C:/Users/adrianloh/Desktop/VM/0102(5).jpg
+ format "768 1152 0 0 768 1152 1 "
+ origset true
+ name Read1
+ label "\[file dirname \[knob file]]"
+ xpos -40
+ ypos -207
+}
+Reformat {
+ format "4096 3112 0 0 4096 3112 1 4K_Super_35(full-ap)"
+ resize height
+ filter Mitchell
+ black_outside true
+ name Reformat1
+ xpos -40
+ ypos -105
+}
+Viewer {
+ frame 1
+ input_process false
+ name Viewer1
+ xpos -40
+ ypos -9
+}
